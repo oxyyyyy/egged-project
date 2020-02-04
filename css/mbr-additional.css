@@ -3772,3 +3772,8 @@ ul li h4.col-head {
 		margin-bottom: 0;
 	}
 }
+
+#sidebar {
+	position: sticky;
+	top: 250px;
+}
