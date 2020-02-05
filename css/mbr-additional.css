@@ -3842,6 +3842,12 @@ ul li h4.col-head {
   z-index: 150;
 }
 
+@media (min-width: 1000px) {
+  .mobile-filters {
+    display: none;
+  }
+}
+
 .mobile-filter-button {
   display: flex;
   justify-content: center;
