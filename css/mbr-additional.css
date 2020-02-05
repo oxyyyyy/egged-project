@@ -1,22 +1,5 @@
-@import url(
-  https://fonts.googleapis.com/css?family=Poppins:300,
-  400,
-  500,
-  600,
-  700
-);
-@import url(
-  https://fonts.googleapis.com/css?family=Rubik:300,
-  300i,
-  400,
-  400i,
-  500,
-  500i,
-  700,
-  700i,
-  900,
-  900i
-);
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i);
 body {
   font-family: "Heebo";
   font-size: 22px;
@@ -1196,7 +1179,6 @@ pre {
   user-select: none;
   pointer-events: none;
   -webkit-user-drag: none;
-  user-drag: none;
 }
 
 .mbr-section__comments .row {
@@ -2737,9 +2719,9 @@ section.shadow-head-1.fixed,
 	padding-bottom: 10px;
 	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.42);
 }
-.lower-menu.fix_left_pull_list-tab .pull-left {
-  /* box-shadow: -4px 0px 6px rgba(0, 0, 0, 0.11); */
-}
+/* .lower-menu.fix_left_pull_list-tab .pull-left {
+  box-shadow: -4px 0px 6px rgba(0, 0, 0, 0.11);
+} */
 .lower-menu.fix_left_pull_list-tab.lower-menu ul {
   text-align: right;
 }
@@ -3819,7 +3801,7 @@ ul li h4.col-head {
   background: #009966;
   border-radius: 8px;
   display: block;
-  width: 90%;
+  width: 60%;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -3849,4 +3831,159 @@ ul li h4.col-head {
 .search-hamburger-container {
   display: flex;
   flex-direction: row-reverse;
+}
+
+.mobile-filters {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 15px;
+  bottom: 15px;
+  z-index: 150;
+}
+
+.mobile-filter-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  border: none;
+  box-shadow: 0px 3px 6px #00000029;
+  width: 50px;
+  height: 50px;
+  border-radius: 999px;
+  outline: none !important;
+  cursor: pointer;
+  padding: 0;
+  z-index: 100;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.mobile-filter-button__icon {
+  transition: all 0.3s ease;
+}
+
+.mobile-filter-button__icon-close {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.mobile-filter-button.active {
+  background-color: #fff;
+}
+
+.mobile-filter-button.active .mobile-filter-button__icon-close {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-filter-button.active .mobile-filter-button__icon {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.mobile-filter-button-container {
+  position: relative;
+}
+
+.mobile-filter-button-container:not(:last-child) {
+  margin-bottom: 11px;
+}
+
+.mobile-filter-button__window {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: #fff;
+  box-shadow: 0px 3px 20px #020000E6;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 314px;
+  padding: 28px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8) translateX(-13%) translateY(13%);
+}
+
+.mobile-filter-button__window.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translateX(0) translateY(0);
+}
+
+.mobile-filter-button__window-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.mobile-filter-button__window-header::before {
+  content: "";
+  width: 140%;
+  height: 5px;
+  background-color: #009966;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mobile-filter-button__window-header-title {
+  font-size: 24px;
+  color: #039A66;
+  margin-top: 12px;
+  margin-bottom: 18px;
+}
+
+.mobile-filter-button__window-link {
+  color: #000000;
+  font-size: 20px;
+}
+
+.mobile-filter-button__window-link:hover {
+  color: #009966;
+  font-weight: 700;
+}
+
+.mobile-filter-button__window-list {
+  text-align: center;
+}
+
+.mobile-filter-button__window-list li:not(:last-child) {
+  margin-bottom: 13px;
+}
+
+.mobile-filter-button__window-checkbox-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #039A66;
+  margin-bottom: 20px;
+}
+
+.mobile-filter-button__window-checkbox-list {
+  text-align: initial;
+  color: #039A66;
+  font-size: 20px;
+}
+
+.mobile-filter-button__window-checkbox-list li {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-filter-button__window-checkbox-list li:not(:last-child) {
+  margin-bottom: 7px;
 }
