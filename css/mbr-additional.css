@@ -3863,19 +3863,19 @@ ul li h4.col-head {
   padding: 0;
   z-index: 100;
   position: relative;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
 }
 
-.mobile-filter-button__icon {
+/* .mobile-filter-button__icon {
   transition: all 0.3s ease;
-}
+} */
 
 .mobile-filter-button__icon-close {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
   opacity: 0;
   visibility: hidden;
 }
