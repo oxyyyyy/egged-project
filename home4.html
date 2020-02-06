@@ -674,7 +674,7 @@
    <div class="search-overlay"></div>
    <div class="mobile-filters">
       <div class="mobile-filter-button-container" style="z-index: 99;">
-         <button class="mobile-filter-button">
+         <button id="mobile-filter-button-1" class="mobile-filter-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="28.425" height="25" viewBox="0 0 28.425 25">
                <defs>
                   <style>
@@ -712,7 +712,7 @@
                </g>
             </svg>
          </button>
-         <div class="mobile-filter-button__window" style="align-items: flex-start; padding-right: 40px;">
+         <div id="mobile-filter-button__window-1" class="mobile-filter-button__window" style="align-items: flex-start; padding-right: 40px;">
             <h6 class="mobile-filter-button__window-checkbox-title">סנן לפי מיקום</h6>
             <ul class="mobile-filter-button__window-checkbox-list">
                <li>
@@ -740,7 +740,7 @@
          </div>
       </div>
       <div class="mobile-filter-button-container" style="z-index: 100;">
-         <button class="mobile-filter-button">
+         <button id="mobile-filter-button-2" class="mobile-filter-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="30.097" height="19.852" viewBox="0 0 30.097 19.852"
                class="mobile-filter-button__icon">
                <defs>
@@ -773,7 +773,7 @@
                </g>
             </svg>
          </button>
-         <div class="mobile-filter-button__window">
+         <div id="mobile-filter-button__window-2" class="mobile-filter-button__window">
             <div class="mobile-filter-button__window-header">
                <svg xmlns="http://www.w3.org/2000/svg" width="52.376" height="43.478" viewBox="0 0 52.376 43.478">
                   <defs>
@@ -853,9 +853,18 @@
       //    innerWrapperSelector: '.sidebar__inner'
       // });
 
-      jQuery('.mobile-filter-button').click(function () {
-         $(this).toggleClass('active');
-         $(this).siblings('.mobile-filter-button__window').toggleClass('active');
+      jQuery('#mobile-filter-button-1').click(function () {
+         jQuery('#mobile-filter-button-2').removeClass('active');
+         jQuery('#mobile-filter-button__window-2').removeClass('active');
+         jQuery(this).toggleClass('active');
+         jQuery(this).siblings('.mobile-filter-button__window').toggleClass('active');
+      });
+
+      jQuery('#mobile-filter-button-2').click(function () {
+         jQuery('#mobile-filter-button-1').removeClass('active');
+         jQuery('#mobile-filter-button__window-1').removeClass('active');
+         jQuery(this).toggleClass('active');
+         jQuery(this).siblings('.mobile-filter-button__window').toggleClass('active');
       });
    </script>
 </body>
