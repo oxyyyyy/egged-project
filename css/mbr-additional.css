@@ -3913,7 +3913,7 @@ ul li h4.col-head {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 314px;
+  width: calc(100vw - 50px);
   padding: 28px;
   transition: all 0.3s ease;
   opacity: 0;
